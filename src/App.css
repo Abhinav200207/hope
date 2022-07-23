@@ -1,38 +1,84 @@
 .App {
   text-align: center;
+  background-color: floralwhite;
+  color: #979797;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inside-card1 {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.inside-card2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 15%;
+}
+
+.inside-dragable{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color:white;
+}
+
+.inside-dragable:hover{
+  background-color: rgba(0, 0, 0, 0.047);
+}
+
+.inside-inside-dragable{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color:white;
+}
+
+.inside-inside-dragable:hover{
+  background-color: rgba(255, 255, 255, 0.847);
+}
+
+/* .L-shaped1{
+  width: 2px;
+  height: 20px;
+  background-color: #979797;
+  position: relative;
+  top: -12px;
+} */
+
+/* .L-shaped2{
+  height: 2px;
+  width: 30px;
+  background-color: #979797;
+  position: relative;
+  top: -12px;
+} */
+
+.L-shaped1 {
+  /* box-shadow: ; */
+  width: 30px;
+  height: 20px;
+  margin-top: -12px;
+  border-left: 1px solid #979797;
+  border-bottom: 1px solid #979797;
+  border-radius: 0px 0px 0px 4px;
+}
+
+.L-shaped2 {
+  width: 30px;
+  height: 20px;
+  border-left: 1px solid #979797;
+}
+
+.assign-icon{
+  border: 1px red;
+  border-style: dashed;
+  border-radius: 50%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
