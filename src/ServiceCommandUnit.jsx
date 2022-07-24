@@ -6,7 +6,7 @@ import MoreHorizSharpIcon from '@mui/icons-material/MoreHorizSharp';
 import DriveFileRenameOutlineSharpIcon from '@mui/icons-material/DriveFileRenameOutlineSharp';
 import EditIcon from '@mui/icons-material/Edit';
 import DoneIcon from '@mui/icons-material/Done';
-import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+// import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 // const grid = 8;
 
@@ -32,6 +32,7 @@ const getItemStyle = (isDragging, draggableStyle) => ({
 
 const getListStyle = isDraggingOver => ({
     background: isDraggingOver ? "lightblue" : "lightgrey",
+    borderTop: isDraggingOver ? "1px solid blue" : "none",
     // padding: grid,
     // margin: "10px 0"
 });
@@ -72,14 +73,14 @@ export default class ServiceCommandUnit extends React.Component {
                                                     <div className="tick"><DoneIcon style={{ "color": "black", "fontWeight": "bold", "height": "17px" }} /></div>
 
                                                     <div>
-                                                        <div style={{"position": "relative","right":"50px","fontSize":"12px"}}>Parent</div>
+                                                        <div style={{ "fontSize": "12px", "paddingLeft": "10px" }}>Parent</div>
                                                         <div style={{ "marginLeft": "10px", "color": "black" }} >{item.content}</div>
                                                     </div>
 
 
                                                     {/* <div className="subtask-icon" style={{ "border": "1px solid black", "marginLeft": "10px", "height": "16px", "borderRadius": "4px", "display": "flex", "alignItems": "center", "justifyContent": "center" }}><AssignmentIcon style={{ "height": "14px" }} /></div> */}
-                                                    <div className="rename-icon" style={{ "alignSelf":"flex-end" , "border": "1px solid black", "marginLeft": "6px", "height": "16px", "borderRadius": "4px", "display": "flex", "alignItems": "center", "justifyContent": "center" }}><DriveFileRenameOutlineSharpIcon style={{ "height": "14px" }} /></div>
-                                                    <div className="edit-task-icon" style={{ "border": "1px solid black","alignSelf":"flex-end", "marginLeft": "6px", "height": "16px", "borderRadius": "4px", "display": "flex", "alignItems": "center", "justifyContent": "center" }}><EditIcon style={{ "height": "14px" }} /></div>
+                                                    <div className="rename-icon" style={{ "alignSelf": "flex-end", "border": "1px solid black", "marginLeft": "6px", "height": "16px", "borderRadius": "4px", "display": "flex", "alignItems": "center", "justifyContent": "center" }}><DriveFileRenameOutlineSharpIcon style={{ "height": "14px" }} /></div>
+                                                    <div className="edit-task-icon" style={{ "border": "1px solid black", "alignSelf": "flex-end", "marginLeft": "6px", "height": "16px", "borderRadius": "4px", "display": "flex", "alignItems": "center", "justifyContent": "center" }}><EditIcon style={{ "height": "14px" }} /></div>
                                                 </div>
 
                                                 <div className='inside-card2'>
@@ -97,7 +98,7 @@ export default class ServiceCommandUnit extends React.Component {
                                 )}
                             </Draggable>
                         ))}
-                        {provided.placeholder}
+                        {/* {provided.placeholder} */}
                     </div>
                 )}
             </Droppable>

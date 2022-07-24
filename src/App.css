@@ -1,8 +1,15 @@
 .App {
-  text-align: center;
-  background-color: floralwhite;
+  /* text-align: center; */
   color: #979797;
 }
+
+.super-main-container {
+  background-color: floralwhite;
+}
+
+/* .create-new-task {
+
+} */
 
 .inside-card1 {
   display: flex;
@@ -18,27 +25,27 @@
   width: 15%;
 }
 
-.inside-dragable{
+.inside-dragable {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px;
-  background-color:white;
+  background-color: white;
 }
 
-.inside-dragable:hover{
+.inside-dragable:hover {
   background-color: rgba(0, 0, 0, 0.047);
 }
 
-.inside-inside-dragable{
+.inside-inside-dragable {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px;
-  background-color:white;
+  background-color: white;
 }
 
-.inside-inside-dragable:hover{
+.inside-inside-dragable:hover {
   background-color: rgba(255, 255, 255, 0.847);
 }
 
@@ -74,7 +81,7 @@
   border-left: 1px solid #979797;
 }
 
-.assign-icon{
+.assign-icon {
   border: 1px red;
   border-style: dashed;
   border-radius: 50%;

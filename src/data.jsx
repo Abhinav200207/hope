@@ -1,7 +1,7 @@
 export const static_items = [
     {
         id: "1",
-        content: "item 1 content",
+        content: "No .1",
         subItems: [
             {
                 id: "10",
@@ -15,7 +15,7 @@ export const static_items = [
     },
     {
         id: "2",
-        content: "item 2 content",
+        content: "No. 2",
         subItems: [
             {
                 id: "20",
@@ -29,7 +29,7 @@ export const static_items = [
     },
     {
         id: "3",
-        content: "item 2 content",
+        content: "No. 3",
         subItems: [
             {
                 id: "30",
@@ -43,7 +43,7 @@ export const static_items = [
     },
     {
         id: "4",
-        content: "item 2 content",
+        content: "No. 4",
         subItems: [
             {
                 id: "40",
