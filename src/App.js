@@ -9,6 +9,7 @@ import AssignmentIndSharpIcon from '@mui/icons-material/AssignmentIndSharp';
 import EventAvailableSharpIcon from '@mui/icons-material/EventAvailableSharp';
 import MoreHorizSharpIcon from '@mui/icons-material/MoreHorizSharp';
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import CloseIcon from '@mui/icons-material/Close';
 import DriveFileRenameOutlineSharpIcon from '@mui/icons-material/DriveFileRenameOutlineSharp';
 import EditIcon from '@mui/icons-material/Edit';
 import { Button } from '@mui/material';
@@ -258,7 +259,7 @@ function App() {
 
                               <div className='inside-card1'>
                                 {item.subItems.length ? (
-                                  < div className="arrow-right-dir" style={{"transform":`${countEle(open, parseInt(item.id)) ? "rotate(90deg)" : "rotate(0deg)"}`}} onClick={() => handleOpenSubTask(item.id)}><ArrowRightIcon /></div>
+                                  < div className="arrow-right-dir" style={{ "transform": `${countEle(open, parseInt(item.id)) ? "rotate(90deg)" : "rotate(0deg)"}` }} onClick={() => handleOpenSubTask(item.id)}><ArrowRightIcon /></div>
                                 ) : (<div style={{ "width": "24px", "height": "10px" }}></div>)}
                                 <div className="tick"><DoneIcon style={{ "color": "black", "fontWeight": "bold", "height": "17px" }} /></div>
 
@@ -283,15 +284,26 @@ function App() {
 
 
                             {parseInt(item.id) === indexforcreatingSubtask ? (
-                              <div style={{ "display": `${(subcreate === false) ? "none" : "block"}` }}>
+                              <div className='input-subtask-box' style={{ "display": `${(subcreate === false) ? "none" : "flex"}` }}>
+
+
+                                <div className='input-subtask-left'>
+                                  <DoneIcon style={{ "height": "20px","color":"black" }} />
+                                  <input type="text" style={{ "outline": "none","border":"none","fontSize":"13px","marginLeft":"10px" }} placeholder="Type '/' for commands" onChange={(e) => {
+                                    setSubTask(e.target.value);
+                                  }} />
+                                </div>
+
+                                <div className='input-subtask-right'>
+                                  <div style={{"fontSize":"12px","paddingBottom":"4px"}}>ctrl+entr to open</div>
+                                  <div style={{"marginRight":"2px"}} className='assign-icon'><AssignmentIndSharpIcon style={{ "height": "18px" }} /></div>
+                                  <div style={{"marginRight":"6px"}} className='assign-icon'><EventAvailableSharpIcon style={{ "height": "18px" }}/></div>
+                                  <Button onClick={() => handleCreateNewSubTask(item.id)} style={{"backgroundColor":"blue","color":"white","fontSize":"12px","fontWeight":"bold","height":"24px"}}>SAVE</Button>
+                                  <div style={{"paddingTop":"4px","marginRight":"6px"}}><CloseIcon /></div>
+                                </div>
 
 
 
-
-                                <input type="text" onChange={(e) => {
-                                  setSubTask(e.target.value);
-                                }} />
-                                <Button onClick={() => handleCreateNewSubTask(item.id)}>Submit</Button>
 
 
 

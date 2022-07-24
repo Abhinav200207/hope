@@ -82,10 +82,36 @@
 }
 
 .assign-icon {
-  border: 1px red;
+  border: 1px black;
   border-style: dashed;
   border-radius: 50%;
   display: flex;
+  height: 25px;
+  width: 25px;
   align-items: center;
   justify-content: center;
+}
+
+
+.input-subtask-box {
+  display: flex;
+  border: 1px solid blue;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+
+.input-subtask-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 49px;
+}
+
+
+.input-subtask-right {
+  display: flex;
+  width: 18%;
+  justify-content: space-between;
+  align-items: center;
 }
